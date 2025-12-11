@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechStore</h1>
+            <nav>
+                <a href="#" data-page="home">Главная</a>
+                <a href="#" data-page="cart">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <button id="backBtn" class="back-btn" onclick="goBack()" style="display: none;">
+        ← Назад
+    </button>
+
+    <main id="content" class="container"></main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p>📞 +7 (920) 642-44-47</p>
+                <p>📧 info@techstore.ru</p>
+                <p>📍 Москва, ул. Техническая, 42</p>
+                <p>🕒 10:00 - 22:00</p>
+            </div>
+            <p class="copyright">© 2025 TechStore</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно оформления заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2> Заказ оформлен!</h2>
+            </div>
+            <div class="modal-body">
+                <div class="order-success">
+                    <p>Спасибо за покупку в TechStore!</p>
+                    <p>Наш менеджер свяжется с вами для подтверждения заказа.</p>
+                </div>
+                <div class="order-details">
+                    <h3>Детали заказа:</h3>
+                    <div id="orderItems"></div>
+                    <div class="order-total">
+                        <strong>Итого: <span id="orderTotal">0 ₽</span></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="continueShopping" class="btn-primary">Продолжить покупки</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
